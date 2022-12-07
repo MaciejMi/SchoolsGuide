@@ -331,6 +331,9 @@ button {
 }
 
 .contact {
+	a {
+		color: c.$text-color;
+	}
 	.text-box {
 		margin-top: 2rem;
 		.description {

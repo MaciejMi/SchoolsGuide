@@ -335,6 +335,9 @@ button {
   border-radius: 2.5rem;
 }
 
+.contact a {
+  color: #fff;
+}
 .contact .text-box {
   margin-top: 2rem;
 }

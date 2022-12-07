@@ -154,15 +154,18 @@ button {
   color: #fff;
   transition: color 0.3s;
 }
-.nav--links a:hover {
-  color: #ff4848;
-}
-.nav--links a:hover::before {
-  content: "";
+.nav--links a::before {
   position: absolute;
   left: -1rem;
   height: 100%;
   width: 4px;
+  transition: background-color 0.3s;
+  content: "";
+}
+.nav--links a:hover {
+  color: #ff4848;
+}
+.nav--links a:hover::before {
   background-color: #ff4848;
 }
 .nav--links.show {

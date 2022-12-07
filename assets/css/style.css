@@ -77,15 +77,47 @@ button {
   align-items: center;
   justify-content: space-between;
 }
+@-webkit-keyframes wave {
+  0%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 14% 0, 27% 14%, 40% 26%, 53% 38%, 67% 48%, 80% 51%, 100% 49%, 100% 99%, 0% 99%);
+            clip-path: polygon(0% 0%, 14% 0, 27% 14%, 40% 26%, 53% 38%, 67% 48%, 80% 51%, 100% 49%, 100% 99%, 0% 99%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 59%, 14% 54%, 30% 53%, 45% 56%, 57% 46%, 66% 31%, 78% 17%, 100% 0, 100% 99%, 0% 99%);
+            clip-path: polygon(0 59%, 14% 54%, 30% 53%, 45% 56%, 57% 46%, 66% 31%, 78% 17%, 100% 0, 100% 99%, 0% 99%);
+  }
+}
+@keyframes wave {
+  0%, 100% {
+    -webkit-clip-path: polygon(0% 0%, 14% 0, 27% 14%, 40% 26%, 53% 38%, 67% 48%, 80% 51%, 100% 49%, 100% 99%, 0% 99%);
+            clip-path: polygon(0% 0%, 14% 0, 27% 14%, 40% 26%, 53% 38%, 67% 48%, 80% 51%, 100% 49%, 100% 99%, 0% 99%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 59%, 14% 54%, 30% 53%, 45% 56%, 57% 46%, 66% 31%, 78% 17%, 100% 0, 100% 99%, 0% 99%);
+            clip-path: polygon(0 59%, 14% 54%, 30% 53%, 45% 56%, 57% 46%, 66% 31%, 78% 17%, 100% 0, 100% 99%, 0% 99%);
+  }
+}
 .nav--header .nav--title {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 .nav--header .nav--title p {
-  padding: 0 1rem;
+  position: relative;
   font-size: 2rem;
   color: #ff4848;
   text-transform: uppercase;
+}
+.nav--header .nav--title p span {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  -webkit-animation: wave 3s ease-in-out infinite;
+          animation: wave 3s ease-in-out infinite;
+}
+.nav--header .nav--title p span:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 .nav--header .nav--title img {
   width: 2.5rem;

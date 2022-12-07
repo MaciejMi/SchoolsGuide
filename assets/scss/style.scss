@@ -218,7 +218,7 @@ button {
 		transform: translate(-50%, -50%);
 		font-size: 4rem;
 		color: c.$main-color;
-		z-index: 2000;
+		z-index: 999;
 		animation: arrowMove 5s infinite;
 	}
 }

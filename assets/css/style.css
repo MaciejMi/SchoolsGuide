@@ -221,7 +221,7 @@ button {
   transform: translate(-50%, -50%);
   font-size: 4rem;
   color: #ff4848;
-  z-index: 2000;
+  z-index: 999;
   -webkit-animation: arrowMove 5s infinite;
           animation: arrowMove 5s infinite;
 }

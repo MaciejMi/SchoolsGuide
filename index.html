@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchoolsGuide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <nav class='nav'>
+        <div class="wrapper">
+            <div class="nav--header">
+                <a href="#home" class="nav--title"> <img src="./assets/img/logo.png"
+                        alt="Zdjęcie przedstawia czerwone logo">
+                    <p>SchoolsGuide</p>
+                </a>
+                <button class="nav--menu">
+                    <div class="bars"></div>
+                </button>
+            </div>
+            <div class="nav--links">
+                <a href="#film">film</a>
+                <a href="#guide">przewodnik</a>
+                <a href="#about-us">o nas</a>
+                <a href="#map">mapa</a>
+                <a href="#contact">kontakt</a>
+            </div>
+        </div>
+    </nav>
+    <header class="header" id="home">
+        <div class="header--image"></div>
+        <div class="header--shadow">
+            <div class="text-box">
+                <h1>Schools<span>Guide</span></h1>
+                <p>Najlepszy <span>przewodnik</span> po szkołach średnich</p>
+                <a href="#guide" class="btn">zaczynajmy</a>
+            </div>
+        </div>
+        <a href="#about-us"><i class="ti ti-arrow-narrow-down"></i></a>
+    </header>
+    <section class="section film" id="film">
+        <div class="text-box">
+            <h2 class="heading">film promocyjny</h2>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quis blanditiis
+                dignissimos
+                laudantium expedita necessitatibus deleniti vero repellat libero quos, voluptatibus et nostrum
+                reiciendis ut
+                amet rerum dolore deserunt aliquam!</p>
+        </div>
+        <video src="./assets/video/film.mp4" controls></video>
+    </section>
+    <section class="section guide" id="guide">
+        <div class="text-box">
+            <h2 class="heading">Przewodnik</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quis, ullam
+                repellendus nisi voluptates quos hic quam exercitationem debitis porro! Suscipit aperiam eius non rerum
+                unde nobis doloremque. Rem numquam quis eaque pariatur modi reiciendis minus deserunt mollitia amet
+                dignissimos, dolorum libero quaerat atque asperiores laboriosam illum consequatur cupiditate aspernatur!
+            </p>
+        </div>
+        <div class="cards">
+            <a href="#" class="card card__lic">
+                <div class="card--image">
+                    <div class="card--shadow">
+                        <h3 class="card--title card--title__lic">Liceum</h3>
+                    </div>
+                </div>
+            </a>
+            <a href='#' class="card card__tech">
+                <div class="card--image">
+                    <div class="card--shadow">
+                        <h3 class="card--title card--title__tech">Technikum</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section about-us" id="about-us">
+        <div class="text-box">
+            <h2 class="heading">O nas</h2>
+        </div>
+        <img src="./assets/img/team.jpg" alt="Zdjęcie naszego zespołu">
+        <div class="text-box">
+            <p class='description'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ex temporibus
+                at reprehenderit libero veniam excepturi totam facilis, consequatur, numquam soluta sed sit vel
+                optio maiores asperiores possimus aliquid!
+                Cumque eius culpa odit, harum mollitia fugit repudiandae
+                veniam quaerat alias quia cum dignissimos ullam voluptatem omnis eum inventore necessitatibus optio
+                ut sed eos molestiae commodi? Voluptas assumenda fugit ad labore blanditiis deserunt, dolore,
+                quisquam cumque odio reprehenderit, officiis tenetur sed perspiciatis voluptatibus? Animi dolorem
+                fugit facilis, assumenda magni sit laudantium.</p>
+        </div>
+    </section>
+    <section class="section map" id="map">
+        <div class="text-box">
+            <div class="heading">Mapa</div>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsam, eveniet cum modi
+                consectetur possimus doloremque quam fugiat hic voluptates. Consectetur quidem ratione quaerat similique
+                porro, atque iste ducimus perspiciatis?</p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d322559.89234870905!2d20.543671424114557!3d50.830752337180286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spowiat%20kielecki%20szko%C5%82y%20ponadpodstawowe!5e0!3m2!1spl!2spl!4v1670422018886!5m2!1spl!2spl"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="section contact" id="contact">
+        <div class="text-box">
+            <div class="heading">Kontakt</div>
+        </div>
+        <div class="text-box">
+            <p class="description"><i class="ti ti-phone-call"></i> +48 123 123</p>
+            <p class="description"><i class="ti ti-mail"></i>
+                nazwa.kontakt@gmail.com</p>
+            <p class="description"><i class="ti ti-map-pin"></i>
+                </i>Zespół Szkół Informatycznych im. Józefa Hauke Bosaka
+                w Kielcach</p>
+            <p class="description"><i class="ti ti-map"></i>
+                Kielce, Warszawska 96</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Maciej Michalczyk &copy; 2022 | Wszelkie prawa zastrzeżone!</p>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

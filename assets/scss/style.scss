@@ -16,7 +16,6 @@ html {
 
 body {
 	font-family: 'Lato', sans-serif;
-	height: 200vh;
 	background-color: c.$background-color;
 }
 
@@ -46,6 +45,7 @@ button {
 	.text-box {
 		text-align: center;
 		.description {
+			word-spacing: 0.3rem;
 			font-size: 1.5rem;
 			padding: 2rem 0;
 		}
@@ -193,6 +193,9 @@ button {
 .header {
 	position: relative;
 	height: 100vh;
+	&--small {
+		height: 40vh;
+	}
 	&--image {
 		position: absolute;
 		top: 0;
@@ -363,6 +366,213 @@ button {
 	}
 }
 
+.ranking {
+	.text-box {
+		.heading {
+			font-size: 2rem;
+		}
+		.description {
+			.search-box {
+				display: inline;
+				border-bottom: 1px solid c.$main-color;
+				input {
+					background: none;
+					border: 0;
+					padding: 0 1rem;
+				}
+				input,
+				button {
+					color: c.$text-color;
+				}
+				input:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+
+	.cards,
+	.podium {
+		padding: 4rem 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 5rem;
+	}
+
+	.podium {
+		gap: 8rem;
+	}
+
+	.card {
+		position: relative;
+		width: 20rem;
+		min-height: 20rem;
+		border-radius: 25px;
+		overflow: hidden;
+		transition: transform 0.3s;
+		color: c.$text-color;
+
+		&--first_place,
+		&--second_place,
+		&--third_place {
+			transform: scale(1.2);
+			p.hide,
+			img.hide {
+				height: auto;
+				opacity: 1;
+			}
+		}
+
+		&--img {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&--content {
+			padding: 2rem;
+			position: absolute;
+			top: 0;
+			display: flex;
+			gap: 0.5rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			text-align: center;
+			P:nth-of-type(1) {
+				font-size: 3rem;
+			}
+			p:nth-of-type(2) {
+				font-size: 1.2rem;
+			}
+			h2 {
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				font-weight: normal;
+			}
+			img {
+				padding-top: 0.2rem;
+				width: 80%;
+			}
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			.hide {
+				opacity: 1;
+				height: auto;
+			}
+		}
+
+		.hide {
+			transition: 1s;
+			height: 0;
+			opacity: 0;
+		}
+
+		&--shadow {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+}
+
+.school {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+	padding: 4rem;
+	.main-img {
+		width: 25rem;
+		height: 20rem;
+		border-radius: 25px;
+		object-fit: cover;
+	}
+	.heading::before {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+		iframe {
+			border-radius: 25px;
+			width: 25rem;
+			height: 25rem;
+		}
+		img {
+			max-width: 20rem;
+		}
+		p {
+			font-size: 2rem;
+			text-align: center;
+			span {
+				color: c.$main-color;
+			}
+			a {
+				color: c.$text-color;
+			}
+		}
+	}
+	.average-results {
+		padding: 2rem;
+		max-width: 1440px;
+		width: 100%;
+		h2 {
+			margin-bottom: 2rem;
+			font-size: 3rem;
+			color: c.$main-color;
+			text-align: center;
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+			div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+			}
+		}
+		p {
+			font-size: 2rem;
+		}
+		meter {
+			width: 100%;
+			height: 4rem;
+			&::-webkit-meter-bar {
+				background-color: #ffa4a4;
+			}
+			&::-webkit-meter-even-less-good-value,
+			&::-webkit-meter-suboptimum-value,
+			&::-webkit-meter-optimum-value {
+				background-color: c.$main-color;
+			}
+		}
+	}
+}
+
 .footer {
 	display: flex;
 	align-items: center;
@@ -412,10 +622,10 @@ button {
 		}
 	}
 	.section {
-		.heading {
-			font-size: 3rem;
-		}
 		.text-box {
+			.heading {
+				font-size: 3rem;
+			}
 			.description {
 				font-size: 2rem;
 			}
@@ -429,6 +639,24 @@ button {
 				&--title {
 					font-size: 2.5rem;
 				}
+			}
+		}
+	}
+	.school {
+		.main-img {
+			width: 50rem;
+			height: 40rem;
+		}
+		.heading {
+			font-size: 4rem;
+		}
+		.main-content {
+			iframe {
+				width: 40rem;
+				height: 40rem;
+			}
+			img {
+				max-width: 30rem;
 			}
 		}
 	}
@@ -476,12 +704,12 @@ button {
 	.section {
 		padding: 5rem 4rem 0;
 
-		.heading {
-			font-size: 4rem;
-		}
 		.text-box {
 			.description {
 				font-size: 2.5rem;
+			}
+			.heading {
+				font-size: 4rem;
 			}
 		}
 	}
@@ -495,6 +723,74 @@ button {
 				height: 50rem;
 				&--title {
 					font-size: 3.5rem;
+				}
+			}
+		}
+	}
+	.ranking {
+		.text-box {
+			.heading {
+				font-size: 6rem;
+			}
+		}
+
+		.podium {
+			gap: 7rem;
+		}
+
+		.card {
+			width: 25rem;
+			min-height: 25rem;
+
+			&--third_place {
+				order: 1;
+			}
+			&--second_place {
+				order: -1;
+			}
+
+			&--third_place,
+			&--second_place {
+				transform: scale(1);
+			}
+
+			&--first_place {
+				order: 0;
+				transform: scale(1.2);
+			}
+
+			&--content {
+				P:nth-of-type(1) {
+					font-size: 5rem;
+				}
+				p:nth-of-type(2) {
+					font-size: 1.4rem;
+				}
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+	.school {
+		.main-img {
+			width: 80rem;
+			height: 50rem;
+		}
+		.main-content {
+			flex-direction: row;
+			text-align: left;
+			.right {
+				width: 50%;
+			}
+			iframe {
+				width: 50%;
+			}
+		}
+		.average-results {
+			div {
+				div {
+					flex-direction: row;
 				}
 			}
 		}

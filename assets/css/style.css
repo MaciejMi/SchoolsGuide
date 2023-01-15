@@ -14,7 +14,6 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  height: 200vh;
   background-color: #0d0d0d;
 }
 
@@ -46,6 +45,7 @@ button {
   text-align: center;
 }
 .section .text-box .description {
+  word-spacing: 0.3rem;
   font-size: 1.5rem;
   padding: 2rem 0;
 }
@@ -199,6 +199,9 @@ button {
 .header {
   position: relative;
   height: 100vh;
+}
+.header--small {
+  height: 40vh;
 }
 .header--image {
   position: absolute;
@@ -368,6 +371,199 @@ button {
   color: #ff4848;
 }
 
+.ranking .text-box .heading {
+  font-size: 2rem;
+}
+.ranking .text-box .description .search-box {
+  display: inline;
+  border-bottom: 1px solid #ff4848;
+}
+.ranking .text-box .description .search-box input {
+  background: none;
+  border: 0;
+  padding: 0 1rem;
+}
+.ranking .text-box .description .search-box input,
+.ranking .text-box .description .search-box button {
+  color: #fff;
+}
+.ranking .text-box .description .search-box input:focus {
+  outline: none;
+}
+.ranking .cards,
+.ranking .podium {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.ranking .podium {
+  gap: 8rem;
+}
+.ranking .card {
+  position: relative;
+  width: 20rem;
+  min-height: 20rem;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  color: #fff;
+}
+.ranking .card--first_place, .ranking .card--second_place, .ranking .card--third_place {
+  transform: scale(1.2);
+}
+.ranking .card--first_place p.hide,
+.ranking .card--first_place img.hide, .ranking .card--second_place p.hide,
+.ranking .card--second_place img.hide, .ranking .card--third_place p.hide,
+.ranking .card--third_place img.hide {
+  height: auto;
+  opacity: 1;
+}
+.ranking .card--img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.ranking .card--content {
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-align: center;
+}
+.ranking .card--content P:nth-of-type(1) {
+  font-size: 3rem;
+}
+.ranking .card--content p:nth-of-type(2) {
+  font-size: 1.2rem;
+}
+.ranking .card--content h2 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.ranking .card--content img {
+  padding-top: 0.2rem;
+  width: 80%;
+}
+.ranking .card:hover {
+  transform: scale(1.1);
+}
+.ranking .card:hover .hide {
+  opacity: 1;
+  height: auto;
+}
+.ranking .card .hide {
+  transition: 1s;
+  height: 0;
+  opacity: 0;
+}
+.ranking .card--shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.school {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+}
+.school .main-img {
+  width: 25rem;
+  height: 20rem;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.school .heading::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.school .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.school .main-content .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.school .main-content iframe {
+  border-radius: 25px;
+  width: 25rem;
+  height: 25rem;
+}
+.school .main-content img {
+  max-width: 20rem;
+}
+.school .main-content p {
+  font-size: 2rem;
+  text-align: center;
+}
+.school .main-content p span {
+  color: #ff4848;
+}
+.school .main-content p a {
+  color: #fff;
+}
+.school .average-results {
+  padding: 2rem;
+  max-width: 1440px;
+  width: 100%;
+}
+.school .average-results h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ff4848;
+  text-align: center;
+}
+.school .average-results div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.school .average-results div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.school .average-results p {
+  font-size: 2rem;
+}
+.school .average-results meter {
+  width: 100%;
+  height: 4rem;
+}
+.school .average-results meter::-webkit-meter-bar {
+  background-color: #ffa4a4;
+}
+.school .average-results meter::-webkit-meter-even-less-good-value, .school .average-results meter::-webkit-meter-suboptimum-value, .school .average-results meter::-webkit-meter-optimum-value {
+  background-color: #ff4848;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -401,7 +597,7 @@ button {
     font-size: 2rem;
     padding: 1.5rem 4rem;
   }
-  .section .heading {
+  .section .text-box .heading {
     font-size: 3rem;
   }
   .section .text-box .description {
@@ -413,6 +609,20 @@ button {
   }
   .guide .cards .card--title {
     font-size: 2.5rem;
+  }
+  .school .main-img {
+    width: 50rem;
+    height: 40rem;
+  }
+  .school .heading {
+    font-size: 4rem;
+  }
+  .school .main-content iframe {
+    width: 40rem;
+    height: 40rem;
+  }
+  .school .main-content img {
+    max-width: 30rem;
   }
 }
 @media (min-width: 992px) {
@@ -447,11 +657,11 @@ button {
   .section {
     padding: 5rem 4rem 0;
   }
-  .section .heading {
-    font-size: 4rem;
-  }
   .section .text-box .description {
     font-size: 2.5rem;
+  }
+  .section .text-box .heading {
+    font-size: 4rem;
   }
   .guide .cards {
     display: flex;
@@ -464,5 +674,54 @@ button {
   }
   .guide .cards .card--title {
     font-size: 3.5rem;
+  }
+  .ranking .text-box .heading {
+    font-size: 6rem;
+  }
+  .ranking .podium {
+    gap: 7rem;
+  }
+  .ranking .card {
+    width: 25rem;
+    min-height: 25rem;
+  }
+  .ranking .card--third_place {
+    order: 1;
+  }
+  .ranking .card--second_place {
+    order: -1;
+  }
+  .ranking .card--third_place, .ranking .card--second_place {
+    transform: scale(1);
+  }
+  .ranking .card--first_place {
+    order: 0;
+    transform: scale(1.2);
+  }
+  .ranking .card--content P:nth-of-type(1) {
+    font-size: 5rem;
+  }
+  .ranking .card--content p:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+  .ranking .card--content h2 {
+    font-size: 1.6rem;
+  }
+  .school .main-img {
+    width: 80rem;
+    height: 50rem;
+  }
+  .school .main-content {
+    flex-direction: row;
+    text-align: left;
+  }
+  .school .main-content .right {
+    width: 50%;
+  }
+  .school .main-content iframe {
+    width: 50%;
+  }
+  .school .average-results div div {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

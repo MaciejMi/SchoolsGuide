@@ -13,7 +13,7 @@ $query_str = "SELECT schools.id,
        schools.eng_rate,
        SUM(qualifications.pass_rate)/COUNT(qualifications.pass_rate)
   FROM schools LEFT OUTER JOIN qualifications ON schools.id = qualifications.schools_id
- WHERE schools.type = 1 GROUP BY schools.name ORDER BY (schools.google_stars + schools.polish_avg + schools.polish_rate + schools.eng_avg + schools.eng_rate + schools.math_avg + schools.math_rate + SUM(qualifications.pass_rate) * SUM(qualifications.people))/7 + COUNT(qualifications.pass_rate) DESC;";
+ WHERE schools.type = 1 GROUP BY schools.name ORDER BY (schools.google_stars + schools.polish_avg + schools.polish_rate + schools.eng_avg + schools.eng_rate + schools.math_avg + schools.math_rate + SUM(qualifications.pass_rate) * SUM(qualifications.people/100))/(7 + COUNT(qualifications.pass_rate)) DESC;";
 $query = $conn->query($query_str);
 $result = $query->fetchAll();
 ?>

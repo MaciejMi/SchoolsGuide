@@ -8,10 +8,10 @@ The best guide to secondary schools in Kielce.
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Main Color | ![#0a192f](https://via.placeholder.com/10/ff4848?text=+) #ff4848 |
-| Background Color | ![#f8f8f8](https://via.placeholder.com/10/0d0d0d?text=+) #0d0d0d |
-| Background Nav Color | ![#00b48a](https://via.placeholder.com/10/070606?text=+) #070606 |
-| Text Color | ![#00d1a0](https://via.placeholder.com/10/fff?text=+) #fff |
+| Main Color | ![#ff4848](https://via.placeholder.com/10/ff4848?text=+) #ff4848 |
+| Background Color | ![#0d0d0d](https://via.placeholder.com/10/0d0d0d?text=+) #0d0d0d |
+| Background Nav Color | ![#070606](https://via.placeholder.com/10/070606?text=+) #070606 |
+| Text Color | ![#fff](https://via.placeholder.com/10/fff?text=+) #fff |
 
 
 ## Run Locally

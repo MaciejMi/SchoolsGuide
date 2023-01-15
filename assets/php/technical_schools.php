@@ -73,8 +73,8 @@ $result = $query->fetchAll();
             <form action="./components/search.php" method="POST" class="description">
                 <div class="search-box">
                     <button type="submit"><i class="ti ti-search"></i></button><input type="search" name="content"
-                        placeholder="Szukasz tylko licea" required>
-                    <input type="hidden" name="type" value="0">
+                        placeholder="Szukasz tylko technika" required>
+                  <input type="hidden" name="type" value="1">
                 </div>
             </form>
         </div>

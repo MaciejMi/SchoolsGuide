@@ -8,6 +8,10 @@ $query_str = "SELECT * FROM schools WHERE schools.id = {$id}";
 $query = $conn->query($query_str);
 $result = $query->fetch();
 
+if (!$result){
+     header("Location: ../../index.html");
+}
+
 if ($result[14] == 1) {
     $query_str = "SELECT * FROM qualifications WHERE qualifications.schools_id ={$id}";
     $query = $conn->query($query_str);

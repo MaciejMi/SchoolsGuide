@@ -97,21 +97,21 @@ if ($result[14] == 1) {
             <h2>Średnie wyniki maturalne: </h2>
             <div>
                 <div>
-                    <p>Język Polski</p>
+                    <p>Język Polski (zdawalność <?= $result[11] ?>%)</p>
                     <meter value="<?= $result[8] ?>" min="0" max="100"></meter>
                     <p>
                         <?= $result[8] ?>%
                     </p>
                 </div>
                 <div>
-                    <p>Matematyka</p>
+                    <p>Matematyka (zdawalność <?= $result[12] ?>%)</p>
                     <meter value="<?= $result[9] ?>" min="0" max="100"></meter>
                     <p>
                         <?= $result[9] ?>%
                     </p>
                 </div>
                 <div>
-                    <p>Język Angielski</p>
+                    <p>Język Angielski (zdawalność <?= $result[13] ?>%)</p>
                     <meter value="<?= $result[10] ?>" min="0" max="100"></meter>
                     <p>
                         <?= $result[10] ?>%
@@ -121,7 +121,7 @@ if ($result[14] == 1) {
         </div>
         <?php if (isset($qualifications)): ?>
         <div class="average-results">
-            <h2>Średnie wyniki egzaminów zawodowych: </h2>
+            <h2>Średnia zdawalność egzaminów zawodowych: </h2>
             <div>
                 <?php foreach ($qualifications as $q): ?>
                     <div>

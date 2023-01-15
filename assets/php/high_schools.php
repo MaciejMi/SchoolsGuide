@@ -42,7 +42,7 @@ $result = $query->fetchAll();
                 <a href="../../index.html#guide">przewodnik</a>
                 <a href="../../index.html#about-us">o nas</a>
                 <a href="../../index.html#map">mapa</a>
-                <a href="../../index.html##contact">kontakt</a>
+                <a href="../../index.html#contact">kontakt</a>
             </div>
         </div>
     </nav>

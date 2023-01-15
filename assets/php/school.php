@@ -8,10 +8,6 @@ $query_str = "SELECT * FROM schools WHERE schools.id = {$id}";
 $query = $conn->query($query_str);
 $result = $query->fetch();
 
-if (!$result){
-     header("Location: ../../index.html");
-}
-
 if ($result[14] == 1) {
     $query_str = "SELECT * FROM qualifications WHERE qualifications.schools_id ={$id}";
     $query = $conn->query($query_str);
@@ -94,6 +90,9 @@ if ($result[14] == 1) {
                     </a></p>
                 <p><span>Historia szkoły: </span>
                     <?= $result[7] ?>
+                </p>
+                <p><span>Minimalna ilość punktów: </span>
+                    <?= $result[3] ?>
                 </p>
             </div>
         </div>

@@ -295,14 +295,19 @@ button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 .guide .cards .card {
   width: 20rem;
   height: 20rem;
   border-radius: 1.5rem;
   overflow: hidden;
+  transition: transform 0.3s;
 }
+.guide .cards .card:hover {
+  transform: scale(1.05);
+}
+
 .guide .cards .card__lic .card--image {
   background-image: url("../img/liceum.jpg");
 }

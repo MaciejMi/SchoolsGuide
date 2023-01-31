@@ -19,4 +19,4 @@ Windows:
 git clone https://github.com/MaciejMi/SchoolsGuide.git
 ```
 
-Then install xampp, start apache and mysql. After that go to localhost/phpmyadmin create open named school_guide and import into this file school_guide.sq.
+Then install xampp, start apache and mysql. After that go to localhost/phpmyadmin create open named school_guide and import into this file school_guide.sql.

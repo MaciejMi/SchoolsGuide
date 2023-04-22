@@ -4,7 +4,6 @@ The best guide to secondary schools in Kielce.
 
 ![image](https://user-images.githubusercontent.com/107648916/233810268-39fb4872-089f-4901-9c54-8e58428619d4.png)
 
-<img src = "./assets/img/logo.png" style = "width: 300px;">
 ## Run Locally
 
 To run SchoolsGuide locally, run this command on your git bash:
